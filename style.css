@@ -34,6 +34,30 @@ header{
     background-color: var(--light);
     z-index: 1;
 }
+
+.menu-item {
+    display: inline-block;
+    padding: 10px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.1);
+    box-shadow: var(--box-shadow);
+    border-radius: 8px;
+}
+
+.foto-item {
+    display: inline-block;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+.foto-item:hover {
+    transform: scale(1.1);
+    border-radius: 8px;
+}
+
 header .logo img{
     height: 30px;
 }
@@ -187,7 +211,15 @@ header input{
     text-align: center;
     box-shadow: var(--box-shadow);
     padding: 20px;
+    transition: transform 0.3s ease;
 }
+
+.listProject .item:hover {
+    transform: scale(1.1);
+    box-shadow: var(--box-shadow);
+    border-radius: 8px;
+}
+
 .listProject .item img{
     width: 90%;
     border-radius: 20px;
@@ -203,7 +235,7 @@ header input{
 /* PROJETOS SEGUNDA PÁGINA */
 .listProject2 {
     display: flex;
-    flex-direction: column; /* Alteração importante para empilhar conteúdo verticalmente */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid #dce1e4;
@@ -324,6 +356,12 @@ header input{
         grid-template-rows: repeat(5, 70px);
         transform: translateX(-100%);
         transition: 0.5s;
+    }
+
+    .menu-item:hover {
+        transform: scale(1.0);
+        box-shadow: var(--box-shadow);
+        border-radius: 8px;
     }
     input#menu:checked ~ .nav{
         transform: translateX(0%);
